@@ -257,42 +257,395 @@
     </div>
 
     <!-- HEADER -->
-    <header class="py-24 px-6 md:px-8 text-center bg-white">
+    <header class="py-24 px-8 text-center bg-white">
       <span
-        class="text-[10px] font-semibold tracking-[0.3em] uppercase text-blue-500 mb-4 block"
+        class="text-[10px] font-bold tracking-[0.3em] uppercase text-blue-500 mb-4 block"
+        >Camera & Style Specialists</span
       >
-        Camera & Style Specialists
-      </span>
-
       <h1
-        class="text-4xl md:text-6xl font-light tracking-tight mb-4 text-gray-900 leading-tight"
+        class="text-4xl md:text-6xl font-light tracking-tight mb-4 text-gray-900"
       >
         Innovation in <br /><span class="font-semibold italic"
           >Every Frame.</span
         >
       </h1>
-
       <p class="text-gray-500 max-w-2xl mx-auto text-lg mb-10">
         Capture life's best moments with Vivo's Zeiss optics and Oppo's AI
         Portrait expert engines.
       </p>
-
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href="#vivo-section"
-          class="px-8 py-3 bg-blue-600 text-white rounded-2xl font-semibold shadow-md hover:scale-105 hover:shadow-lg transition"
+          class="px-8 py-3 bg-blue-600 text-white rounded-2xl font-semibold shadow-lg hover:scale-105 transition-all"
+          >Explore Vivo</a
         >
-          Explore Vivo
-        </a>
-
         <a
           href="#oppo-section"
-          class="px-8 py-3 bg-green-600 text-white rounded-2xl font-semibold shadow-md hover:scale-105 hover:shadow-lg transition"
+          class="px-8 py-3 bg-green-600 text-white rounded-2xl font-semibold shadow-lg hover:scale-105 transition-all"
+          >Explore Oppo</a
         >
-          Explore Oppo
-        </a>
       </div>
     </header>
+    <section
+      id="vivo-section"
+      class="py-24 px-8 bg-vivo border-t border-blue-50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16">
+          <h2 class="text-4xl font-bold vivo-blue tracking-tighter">Vivo</h2>
+          <div class="h-[1px] flex-grow bg-blue-200"></div>
+          <span
+            class="text-[10px] font-bold uppercase tracking-widest text-blue-400"
+            >Professional Photography</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-blue-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <span
+                class="absolute top-4 left-4 z-30 bg-blue-600 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase"
+                >Zeiss Lens</span
+              >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/vivox300.webp"
+                  class="snap-item"
+                  alt="Vivo X300 Front"
+                />
+                <img
+                  src="images/x300.jpg"
+                  class="snap-item"
+                  alt="Vivo X300 Back"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Vivo X300 Series</h3>
+            <p class="text-xs font-semibold text-blue-500 mb-6">
+              200MP ZEISS APO Telephoto
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-blue-50 text-blue-600 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all"
+            >
+              Order Online
+            </button>
+          </div>
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-blue-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/v70.jpg"
+                  class="snap-item"
+                  alt="Vivo V70 Front"
+                />
+                <img
+                  src="images/v70-02.jpg"
+                  class="snap-item"
+                  alt="Vivo V70 Back"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Vivo V70</h3>
+            <p class="text-xs font-semibold text-blue-500 mb-6">
+              Performance King
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-blue-50 text-blue-600 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all"
+            >
+              Order Online
+            </button>
+          </div>
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-blue-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/vivoyseries.webp"
+                  class="snap-item"
+                  alt="Vivo Y Series"
+                />
+                <img
+                  src="images/yseries.jpg"
+                  class="snap-item"
+                  alt="Back View"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Vivo Y Series</h3>
+            <p class="text-xs font-semibold text-blue-500 mb-6">
+              Budget Premium
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-blue-50 text-blue-600 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all"
+            >
+              Order Online
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="oppo-section"
+      class="py-24 px-8 bg-oppo border-t border-green-50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16">
+          <h2 class="text-4xl font-bold oppo-green tracking-tighter">Oppo</h2>
+          <div class="h-[1px] flex-grow bg-green-200"></div>
+          <span
+            class="text-[10px] font-bold uppercase tracking-widest text-green-400"
+            >Inspiration Ahead</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-green-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <span
+                class="absolute top-4 left-4 z-30 bg-green-600 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase"
+                >AI Expert</span
+              >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/OppoReno15.webp"
+                  class="snap-item"
+                  alt="Oppo Reno 15"
+                />
+                <img
+                  src="images/reno15-02.jpg"
+                  class="snap-item"
+                  alt="Back View"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Oppo Reno 15</h3>
+            <p class="text-xs font-semibold text-green-500 mb-6">
+              AI Camera Specialist
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-green-50 text-green-600 rounded-2xl font-bold hover:bg-green-600 hover:text-white transition-all"
+            >
+              Check Price
+            </button>
+          </div>
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-green-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/OppoFseries.webp"
+                  class="snap-item"
+                  alt="Oppo F Series"
+                />
+                <img
+                  src="images/oppof02.jpg"
+                  class="snap-item"
+                  alt="Back View"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Oppo F Series 5G</h3>
+            <p class="text-xs font-semibold text-green-500 mb-6">
+              India's Toughest Phone
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-green-50 text-green-600 rounded-2xl font-bold hover:bg-green-600 hover:text-white transition-all"
+            >
+              Check Price
+            </button>
+          </div>
+          <div
+            class="product-card bg-white p-6 rounded-[2.5rem] border border-green-50 group"
+          >
+            <div
+              class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-50 relative"
+            >
+              <button onclick="slide(this, -1)" class="nav-btn left-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-3">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="img-track h-full no-scrollbar">
+                <img
+                  src="images/oppo-a.webp"
+                  class="snap-item"
+                  alt="Oppo A3 Pro"
+                />
+                <img
+                  src="images/oppo-a6x.jpg"
+                  class="snap-item"
+                  alt="Back View"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Oppo A Series</h3>
+            <p class="text-xs font-semibold text-green-500 mb-6">
+              Durable Powerhouse
+            </p>
+            <button
+              class="whatsapp-btn w-full py-4 bg-green-50 text-green-600 rounded-2xl font-bold hover:bg-green-600 hover:text-white transition-all"
+            >
+              Check Price
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-gray-950 text-gray-300 pt-20 pb-10 px-6">
       <div class="max-w-7xl mx-auto">

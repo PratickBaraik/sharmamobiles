@@ -189,7 +189,7 @@
 
   <body class="antialiased">
     <!-- NAVBAR -->
-    <nav class="sticky top-0 z-50 glass border-b border-gray-200">
+    <nav class="sticky top-0 z-50 glass border-b border-gray-200 shadow-sm">
       <div
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
@@ -203,19 +203,105 @@
         <div
           class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
         >
-          <a href="index.html" class="hover:text-black transition">Home</a>
-          <a href="service.html" class="hover:text-black">Repairs</a>
-          <a href="emi.html" class="hover:text-black">EMI Options</a>
+          <a href="index.html" class="hover:text-black transition duration-200"
+            >Home</a
+          >
+
+          <div class="relative">
+            <button
+              id="productBtn"
+              class="flex items-center gap-1 hover:text-black transition duration-200"
+            >
+              Products
+              <svg class="w-4 h-4" fill="none" stroke="currentColor">
+                <path
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="productMenu"
+              class="hidden absolute left-0 mt-3 w-56 bg-white/90 rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+            >
+              <a
+                href="samsung.html"
+                class="block px-5 py-3 hover:bg-gray-50 font-semibold text-blue-600"
+                >Samsung Galaxy</a
+              >
+              <a href="iphone.html" class="block px-5 py-3 hover:bg-gray-50"
+                >iPhone</a
+              >
+              <a href="vivo-oppo.html" class="block px-5 py-3 hover:bg-gray-50"
+                >Vivo / Oppo</a
+              >
+              <a
+                href="realme-redmi.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Realme / Redmi</a
+              >
+              <a
+                href="moto-oneplus.html"
+                class="block px-5 py-3 hover:bg-gray-50"
+                >Moto / OnePlus</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="service.html"
+            class="hover:text-black transition duration-200"
+            >Repairs</a
+          >
+          <a href="emi.html" class="hover:text-black transition duration-200"
+            >EMI Options</a
+          >
 
           <a
             href="order.html"
-            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900"
+            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition hover:scale-105"
           >
             Order Now
           </a>
         </div>
+
+        <button id="mobileMenuBtn" class="md:hidden">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor">
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden bg-white border-b border-gray-100 px-8 py-4 space-y-4 shadow-lg fixed w-full z-40"
+    >
+      <a href="samsung.html" class="block text-blue-600 font-bold"
+        >Samsung Galaxy</a
+      >
+      <a href="iphone.html" class="block text-gray-600 font-medium">iPhone</a>
+      <a href="vivo-oppo.html" class="block text-gray-600 font-medium"
+        >Vivo / Oppo</a
+      >
+      <a href="moto-oneplus.html" class="block text-gray-600 font-medium"
+        >Moto / OnePlus</a
+      >
+      <a href="realme-redmi.html" class="block text-gray-600 font-medium"
+        >Realme / Redmi</a
+      >
+      <a href="service.html" class="block text-gray-600 font-medium">Repairs</a>
+      <a href="emi.html" class="block text-gray-600 font-medium">EMI Options</a>
+    </div>
 
     <!-- HEADER -->
     <header class="py-24 px-6 text-center bg-white">
@@ -224,18 +310,344 @@
       >
         Premium Performance
       </span>
-
       <h1 class="text-5xl md:text-6xl font-light tracking-tight mt-4">
         Hello <span class="font-semibold italic">Moto</span>
       </h1>
-
       <div class="flex justify-center items-center gap-6 mt-10">
         <img src="images/Motorola-Logo.png" class="h-8 opacity-80" />
         <div class="w-[1px] h-8 bg-gray-300"></div>
         <img src="images/onepluslogo.png" class="h-6 opacity-80" />
       </div>
     </header>
-
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 border-l-4 border-black pl-6"
+        >
+          <div>
+            <h2 class="text-4xl font-extrabold tracking-tight">Motorola</h2>
+            <p class="text-gray-500 mt-2">
+              ThinkShield security with powerful performance.
+            </p>
+          </div>
+          <span
+            class="text-xs font-semibold px-4 py-2 bg-black text-white rounded-full"
+          >
+            Edge • Razr • Moto G
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div
+            class="product-card bg-white rounded-3xl border border-gray-200 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/motoedge60.jpg" class="snap-item" />
+                <img src="images/edge60pro.jpg" class="snap-item" />
+                <img src="images/edge60pro02.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Edge 60 Series</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                Snapdragon 8 Elite • 144Hz pOLED
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-900 transition whatsapp-btn"
+              >
+                Check Offers
+              </a>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-3xl border border-gray-200 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/razr60.jpg" class="snap-item" />
+                <img src="images/razr60-02.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Razr 50 Ultra</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                Massive External Display • Flip Design
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-900 transition whatsapp-btn"
+              >
+                Check Offers
+              </a>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-3xl border border-gray-200 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/g86power.jpg" class="snap-item" />
+                <img src="images/g86power02.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Moto G86 Power</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                6000mAh Battery • Clean Android
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-900 transition whatsapp-btn"
+              >
+                Check Offers
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-6 bg-red-50">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 border-l-4 border-red-600 pl-6"
+        >
+          <div>
+            <h2 class="text-4xl font-bold text-red-600">OnePlus</h2>
+            <p class="text-gray-500 mt-2">Never Settle. Smooth performance.</p>
+          </div>
+          <span
+            class="text-xs font-semibold px-4 py-2 bg-red-600 text-white rounded-full"
+          >
+            2026 Lineup
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div
+            class="product-card bg-white rounded-3xl border border-red-100 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/oneplus15.webp" class="snap-item" />
+                <img src="images/oneplus15.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">OnePlus 15</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                Hasselblad Camera • 150W Charging
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-red-600 transition whatsapp-btn"
+              >
+                Buy with EMI
+              </a>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-3xl border border-red-100 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/oneplus15r.jpg" class="snap-item" />
+                <img src="images/oneplus15r2.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">OnePlus 15R</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                Flagship Performance • 120Hz AMOLED
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-red-600 transition whatsapp-btn"
+              >
+                Buy with EMI
+              </a>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-3xl border border-red-100 overflow-hidden group"
+          >
+            <div class="relative aspect-square bg-gray-100">
+              <button onclick="slide(this, -1)" class="nav-btn left-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button onclick="slide(this, 1)" class="nav-btn right-4">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div
+                class="img-track flex h-full overflow-x-auto snap-inline no-scrollbar"
+              >
+                <img src="images/nord5.webp" class="snap-item" />
+                <img src="images/nord502.jpg" class="snap-item" />
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">OnePlus Nord 5</h3>
+              <p class="text-sm text-gray-500 mb-5">
+                Stylish Design • Balanced Performance
+              </p>
+              <a
+                href=""
+                class="block py-3 bg-black text-white rounded-xl font-semibold hover:bg-red-600 transition whatsapp-btn"
+              >
+                Buy with EMI
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="bg-gray-950 text-gray-300 pt-20 pb-10 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">

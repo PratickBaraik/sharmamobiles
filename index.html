@@ -181,7 +181,7 @@
 
   <body class="antialiased">
     <!-- NAVBAR -->
-    <nav class="sticky top-0 z-50 glass border-b border-gray-200">
+    <nav class="sticky top-0 z-50 glass border-b border-gray-200 shadow-sm">
       <div
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
@@ -195,20 +195,17 @@
         <div
           class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
         >
-          <a href="index.html" class="hover:text-black transition">Home</a>
+          <a href="index.html" class="hover:text-black transition duration-200"
+            >Home</a
+          >
 
           <div class="relative">
             <button
               id="productBtn"
-              class="flex items-center gap-1 hover:text-black transition"
+              class="flex items-center gap-1 hover:text-black transition duration-200"
             >
               Products
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor">
                 <path
                   stroke-width="2"
                   stroke-linecap="round"
@@ -220,7 +217,7 @@
 
             <div
               id="productMenu"
-              class="hidden absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100"
+              class="hidden absolute left-0 mt-3 w-56 bg-white/90 rounded-xl shadow-xl border border-gray-100 overflow-hidden"
             >
               <a
                 href="samsung.html"
@@ -246,12 +243,18 @@
             </div>
           </div>
 
-          <a href="service.html" class="hover:text-black">Repairs</a>
-          <a href="emi.html" class="hover:text-black">EMI Options</a>
+          <a
+            href="service.html"
+            class="hover:text-black transition duration-200"
+            >Repairs</a
+          >
+          <a href="emi.html" class="hover:text-black transition duration-200"
+            >EMI Options</a
+          >
 
           <a
             href="order.html"
-            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900"
+            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition hover:scale-105"
           >
             Order Now
           </a>
@@ -270,42 +273,181 @@
       </div>
     </nav>
 
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden bg-white border-b border-gray-100 px-8 py-4 space-y-4 shadow-lg fixed w-full z-40"
+    >
+      <a href="samsung.html" class="block text-blue-600 font-bold"
+        >Samsung Galaxy</a
+      >
+      <a href="iphone.html" class="block text-gray-600 font-medium">iPhone</a>
+      <a href="vivo-oppo.html" class="block text-gray-600 font-medium"
+        >Vivo / Oppo</a
+      >
+      <a href="moto-oneplus.html" class="block text-gray-600 font-medium"
+        >Moto / OnePlus</a
+      >
+      <a href="realme-redmi.html" class="block text-gray-600 font-medium"
+        >Realme / Redmi</a
+      >
+      <a href="service.html" class="block text-gray-600 font-medium">Repairs</a>
+      <a href="emi.html" class="block text-gray-600 font-medium">EMI Options</a>
+    </div>
     <!-- HERO -->
-    <header class="py-24 px-8 text-center bg-white hero-gradient">
+    <header class="py-24 px-8 text-center bg-white relative">
       <span
         class="bg-blue-50 text-blue-600 text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
+        >Samsung Authorized Partners</span
       >
-        Samsung Authorized Partners
-      </span>
-
       <h1 class="text-5xl md:text-7xl font-light tracking-tight mt-6 mb-10">
         All-in-One <br /><span class="font-bold gemini-text">Mobile Hub.</span>
       </h1>
-
-      <button
-        class="bg-gray-900 text-white px-10 py-4 rounded-2xl font-semibold hover:bg-black shadow-xl"
-      >
-        Explore Brands
-      </button>
+      <div class="relative inline-block text-left mb-12">
+        <button
+          id="heroProductBtn"
+          class="bg-gray-900 text-white px-10 py-4 rounded-2xl font-semibold flex items-center gap-3 hover:bg-black transition-all shadow-xl"
+        >
+          Explore Brands
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          id="heroProductMenu"
+          class="hidden absolute left-1/2 -translate-x-1/2 mt-3 w-56 bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 z-50"
+        >
+          <a
+            href="samsung.html"
+            class="block px-6 py-2 hover:bg-blue-50 transition font-bold text-blue-600"
+            >Samsung Galaxy</a
+          >
+          <a
+            href="iphone.html"
+            class="block px-6 py-2 hover:bg-gray-50 transition"
+            >iPhone Series</a
+          >
+          <a
+            href="vivo-oppo.html"
+            class="block px-6 py-2 hover:bg-gray-50 transition"
+            >Vivo / Oppo</a
+          >
+          <a
+            href="moto-oneplus.html"
+            class="block px-6 py-2 hover:bg-gray-50 transition"
+            >Moto / OnePlus</a
+          >
+          <a
+            href="realme-redmi.html"
+            class="block px-6 py-2 hover:bg-gray-50 transition"
+            >Realme / Redmi</a
+          >
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-10 opacity-100">
+        <img src="images/cholamandalam.png" alt="HDB" class="h-6" />
+        <img
+          src="images/HDB_Financial_Services_logo.svg"
+          alt="HDB"
+          class="h-6"
+        />
+        <img src="images/samsungfinance.webp" alt="Bajaj" class="h-6" />
+        <img src="images/dmi.jpeg" alt="Bajaj" class="h-6" />
+        <img src="images/Bajaj_Finserv_Logo.svg.png" alt="Bajaj" class="h-6" />
+      </div>
     </header>
-
-    <!-- PRODUCTS -->
-    <section class="max-w-7xl mx-auto py-20 px-8">
+    <section id="phones" class="max-w-7xl mx-auto py-20 px-8">
       <h2 class="text-2xl font-semibold mb-12 gemini-border pl-4">
         Latest Collections
       </h2>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- CARD -->
         <div
-          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border shadow-sm"
+          onclick="location.href = 'samsung.html'"
+          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border-2 border-blue-100 shadow-sm"
+        >
+          <div
+            class="aspect-square bg-blue-50 rounded-3xl mb-4 overflow-hidden relative"
+          >
+            <span
+              class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10"
+              >AUTHORIZED</span
+            >
+            <img
+              src="images/samsung for index page.webp"
+              alt="Samsung Galaxy"
+              class="object-cover w-full h-full group-hover:scale-110 transition duration-700"
+            />
+          </div>
+          <h3 class="font-bold text-xl text-center py-2 text-blue-700">
+            Samsung Galaxy
+          </h3>
+          <p class="text-center text-xs text-gray-500 pb-4">
+            Budget M to Ultra S-series
+          </p>
+        </div>
+        <div
+          onclick="location.href = 'iphone.html'"
+          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
         >
           <div
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
           >
-            <img src="images/iphone17.jpg" class="object-cover w-full h-full" />
+            <img
+              src="images/iphone 17"
+              alt="iPhone"
+              class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
+            />
           </div>
-          <h3 class="text-center font-semibold">iPhone Series</h3>
+          <h3 class="font-semibold text-lg text-center py-2">iPhone Series</h3>
+          <p class="text-center text-xs text-gray-500 pb-4">
+            Premium Apple Experience
+          </p>
+        </div>
+        <div
+          onclick="location.href = 'vivo-oppo.html'"
+          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+        >
+          <div
+            class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
+          >
+            <img
+              src="images/vivoimages.webp"
+              alt="Vivo Premium"
+              class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <h3 class="font-semibold text-lg text-center py-2">Vivo & Oppo</h3>
+          <p class="text-center text-xs text-gray-500 pb-4">
+            Masterpiece Photography
+          </p>
+        </div>
+        <div
+          onclick="location.href = 'moto-oneplus.html'"
+          class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
+        >
+          <div
+            class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
+          >
+            <img
+              src="images/oneplus15.jpg"
+              alt="OnePlus"
+              class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <h3 class="font-semibold text-lg text-center py-2">Moto & OnePlus</h3>
+          <p class="text-center text-xs text-gray-500 pb-4">
+            Clean OS & Performance
+          </p>
         </div>
       </div>
     </section>
