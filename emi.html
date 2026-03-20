@@ -103,183 +103,202 @@
       </p>
     </header>
 
-    <section class="max-w-4xl mx-auto py-16 px-8">
+    <section class="max-w-5xl mx-auto py-12 md:py-20 px-4 md:px-6">
       <div
-        class="bg-white border border-gray-200 rounded-[2.5rem] p-8 md:p-12 shadow-sm"
+        class="bg-white border border-gray-200 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 shadow-sm"
       >
-        <div class="text-center mb-10">
-          <h2 class="text-2xl font-bold mb-2">Quick EMI Estimator</h2>
-          <p class="text-gray-500 text-sm">
+        <!-- HEADER -->
+        <div class="text-center mb-8 md:mb-12">
+          <h2
+            class="font-bold text-gray-900 leading-tight text-[clamp(1.4rem,2vw,2rem)]"
+          >
+            Quick EMI Estimator
+          </h2>
+          <p class="text-gray-500 mt-2 text-[clamp(0.85rem,1vw,0.95rem)]">
             Calculate your monthly installments instantly
           </p>
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 py-12">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            <!-- ================= LEFT PANEL ================= -->
-            <div
-              class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm space-y-6"
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-stretch"
+        >
+          <!-- ================= LEFT PANEL ================= -->
+          <div
+            class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6"
+          >
+            <h2
+              class="font-bold text-gray-900 text-[clamp(1.1rem,1.5vw,1.25rem)]"
             >
-              <h2 class="text-xl font-bold text-gray-900">Calculate EMI</h2>
+              Calculate EMI
+            </h2>
 
-              <!-- PRICE -->
-              <div>
-                <label class="text-sm font-semibold text-gray-600 mb-2 block">
-                  Phone Price (₹)
-                </label>
-                <input
-                  type="number"
-                  id="price"
-                  value="25000"
-                  class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-lg font-semibold focus:ring-2 focus:ring-blue-500 outline-none"
-                />
-              </div>
+            <!-- PRICE -->
+            <div>
+              <label
+                class="block mb-2 text-gray-600 font-medium text-[clamp(0.8rem,1vw,0.9rem)]"
+              >
+                Phone Price (₹)
+              </label>
+              <input
+                type="number"
+                id="price"
+                value="25000"
+                class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 h-12 md:h-13 text-[clamp(1rem,1.2vw,1.1rem)] font-semibold focus:ring-2 focus:ring-blue-500 outline-none transition"
+              />
+            </div>
 
-              <!-- PARTNER -->
-              <div>
-                <label class="text-sm font-semibold text-gray-600 mb-2 block">
-                  Select EMI Partner
-                </label>
+            <!-- PARTNER -->
+            <div>
+              <label
+                class="block mb-2 text-gray-600 font-medium text-[clamp(0.8rem,1vw,0.9rem)]"
+              >
+                Select EMI Partner
+              </label>
 
-                <div class="relative">
-                  <select
-                    id="partner"
-                    class="w-full appearance-none bg-white border border-gray-300 rounded-xl h-12 px-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+              <div class="relative">
+                <select
+                  id="partner"
+                  class="w-full appearance-none bg-white border border-gray-300 rounded-xl h-12 md:h-13 px-4 pr-10 text-[clamp(0.9rem,1vw,1rem)] font-medium text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                >
+                  <option value="zero">0% Finance</option>
+                  <option value="chola">Cholamandalam</option>
+                  <option value="tvs">TVS Credit</option>
+                  <option value="samsung">Samsung Finance+</option>
+                  <option value="bajaj">Bajaj Finance</option>
+                  <option value="hdfc">HDFC Finance</option>
+                  <option value="dmi">DMI Finance</option>
+                </select>
+
+                <!-- Arrow -->
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
                   >
-                    <option value="zero">0% Finance</option>
-                    <option value="chola">Cholamandalam</option>
-                    <option value="tvs">TVS Credit</option>
-                    <option value="samsung">Samsung Finance+</option>
-                    <option value="bajaj">Bajaj Finance</option>
-                    <option value="hdfc">HDFC Finance</option>
-                    <option value="dmi">DMI Finance</option>
-                  </select>
-
-                  <!-- Custom Arrow -->
-                  <div
-                    class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
-              </div>
-
-              <!-- TENURE -->
-              <div>
-                <label class="text-sm font-semibold text-gray-600 mb-2 block">
-                  Tenure
-                </label>
-
-                <div class="relative">
-                  <select
-                    id="tenure"
-                    class="w-full appearance-none bg-white border border-gray-300 rounded-xl h-12 px-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                  >
-                    <option value="6">6 Months</option>
-                    <option value="9">9 Months</option>
-                    <option value="12" selected>12 Months</option>
-                    <option value="18">18 Months</option>
-                    <option value="24">24 Months</option>
-                  </select>
-
-                  <!-- Custom Arrow -->
-                  <div
-                    class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- TRUST -->
-              <div class="text-xs text-gray-400 pt-2 border-t">
-                ✔ RBI Compliant • ✔ No Hidden Charges • ✔ Instant Approval
               </div>
             </div>
 
-            <!-- ================= RIGHT PANEL ================= -->
-            <div
-              class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden"
-            >
-              <!-- Badge -->
-              <div
-                class="absolute top-4 right-4 bg-white/20 text-xs px-3 py-1 rounded-full"
+            <!-- TENURE -->
+            <div>
+              <label
+                class="block mb-2 text-gray-600 font-medium text-[clamp(0.8rem,1vw,0.9rem)]"
               >
-                Best Offer
-              </div>
+                Tenure
+              </label>
 
-              <!-- EMI -->
-              <div class="text-center">
-                <p class="text-xs uppercase tracking-widest opacity-80">
-                  Monthly EMI
-                </p>
-
-                <h1 class="text-5xl font-bold mt-2">
-                  ₹<span id="emi-result">0</span>
-                </h1>
-
-                <p id="interest-label" class="text-sm opacity-80 mt-2">
-                  Select partner
-                </p>
-              </div>
-
-              <!-- Divider -->
-              <div class="border-t border-white/20 my-6"></div>
-
-              <!-- BREAKDOWN -->
-              <div class="space-y-3 text-sm">
-                <div class="flex justify-between">
-                  <span class="opacity-80">Interest</span>
-                  <span id="interest">₹0</span>
-                </div>
-
-                <div class="flex justify-between">
-                  <span class="opacity-80">Processing Fee</span>
-                  <span id="processing">₹0</span>
-                </div>
-
-                <div class="flex justify-between">
-                  <span class="opacity-80">GST (18%)</span>
-                  <span id="gst">₹0</span>
-                </div>
-
-                <!-- Savings -->
-                <div class="flex justify-between text-green-300 font-semibold">
-                  <span>You Save</span>
-                  <span id="savings">₹0</span>
-                </div>
-
-                <!-- TOTAL -->
-                <div
-                  class="border-t border-white/20 pt-3 flex justify-between font-bold text-lg"
+              <div class="relative">
+                <select
+                  id="tenure"
+                  class="w-full appearance-none bg-white border border-gray-300 rounded-xl h-12 md:h-13 px-4 pr-10 text-[clamp(0.9rem,1vw,1rem)] font-medium text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 >
-                  <span>Total Payable</span>
-                  <span id="total">₹0</span>
+                  <option value="6">6 Months</option>
+                  <option value="9">9 Months</option>
+                  <option value="12" selected>12 Months</option>
+                  <option value="18">18 Months</option>
+                  <option value="24">24 Months</option>
+                </select>
+
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
+              </div>
+            </div>
+
+            <!-- TRUST -->
+            <div
+              class="pt-3 border-t text-gray-400 leading-relaxed text-[clamp(0.7rem,0.9vw,0.8rem)]"
+            >
+              ✔ RBI Compliant • ✔ No Hidden Charges • ✔ Instant Approval
+            </div>
+          </div>
+
+          <!-- ================= RIGHT PANEL ================= -->
+          <div
+            class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between"
+          >
+            <!-- Badge -->
+            <div
+              class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-xs px-3 py-1 rounded-full"
+            >
+              Best Offer
+            </div>
+
+            <!-- EMI -->
+            <div class="text-center">
+              <p
+                class="uppercase tracking-widest opacity-80 text-[clamp(0.65rem,0.8vw,0.75rem)]"
+              >
+                Monthly EMI
+              </p>
+
+              <h1 class="font-bold mt-2 text-[clamp(2rem,5vw,3rem)]">
+                ₹<span id="emi-result">0</span>
+              </h1>
+
+              <p
+                id="interest-label"
+                class="opacity-80 mt-2 text-[clamp(0.8rem,1vw,0.9rem)]"
+              >
+                Select partner
+              </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/20 my-5 md:my-6"></div>
+
+            <!-- BREAKDOWN -->
+            <div class="space-y-3 text-[clamp(0.85rem,1vw,0.95rem)]">
+              <div class="flex justify-between">
+                <span class="opacity-80">Interest</span>
+                <span id="interest">₹0</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span class="opacity-80">Processing Fee</span>
+                <span id="processing">₹0</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span class="opacity-80">GST (18%)</span>
+                <span id="gst">₹0</span>
+              </div>
+
+              <div class="flex justify-between text-green-300 font-semibold">
+                <span>You Save</span>
+                <span id="savings">₹0</span>
+              </div>
+
+              <div
+                class="border-t border-white/20 pt-3 flex justify-between font-bold text-[clamp(1rem,1.2vw,1.1rem)]"
+              >
+                <span>Total Payable</span>
+                <span id="total">₹0</span>
               </div>
             </div>
           </div>
