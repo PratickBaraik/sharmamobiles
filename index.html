@@ -8,45 +8,24 @@
       content="Sharma Mobiles - Authorized Samsung Partner in Hasimara. Best deals on iPhone, Vivo, Oppo, and premium mobile repairs."
     />
     <title>Sharma Mobiles | Samsung, iPhone & Premium Tech</title>
-
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-
     <style>
       body {
         font-family: Inter, sans-serif;
         background: #f8fafc;
         color: #111827;
         scroll-behavior: smooth;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
       }
 
       .brand-gradient {
         background: linear-gradient(135deg, #2563eb, #9333ea, #ef4444);
-        background-size: 200% 200%;
-        animation: gradientMove 6s ease infinite;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
-
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
       }
 
       .hero-gradient {
@@ -69,119 +48,22 @@
       }
 
       .glass {
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(18px) saturate(140%);
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(14px);
       }
 
-      .card-hover,
-      .hover-card {
+      .card-hover {
         transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .card-hover:hover,
-      .hover-card:hover {
-        transform: translateY(-10px) scale(1.01);
-        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
-      }
-
-      img {
-        transition:
-          transform 0.6s ease,
-          filter 0.3s ease;
-      }
-
-      .group:hover img {
-        transform: scale(1.08);
-        filter: contrast(1.05);
-      }
-
-      button:hover {
-        transform: translateY(-1px);
-      }
-
-      button:active {
-        transform: scale(0.97);
-      }
-
-      #productMenu,
-      #heroProductMenu,
-      #mobileMenu {
-        transition: all 0.25s ease;
-        transform-origin: top;
-      }
-
-      #productMenu:not(.hidden),
-      #heroProductMenu:not(.hidden) {
-        animation: dropdownFade 0.25s ease forwards;
-      }
-
-      @keyframes dropdownFade {
-        from {
-          opacity: 0;
-          transform: translateY(-10px) scale(0.98);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-        }
-      }
-
-      .gemini-border {
-        position: relative;
-      }
-
-      .gemini-border::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 70%;
-        background: linear-gradient(to bottom, #2563eb, #9333ea);
-        border-radius: 999px;
-      }
-
-      .gemini-text {
-        background: linear-gradient(135deg, #2563eb, #9333ea);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      footer {
-        background: linear-gradient(to top, #020617, #020617 60%, #020617ee);
-      }
-
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(#2563eb, #9333ea);
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-
-      @media (max-width: 768px) {
-        .card-hover:hover,
-        .hover-card:hover {
-          transform: none;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .brand-gradient {
-          animation: none;
-        }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.12);
       }
     </style>
   </head>
-
   <body class="antialiased">
-    <!-- NAVBAR -->
-    <nav class="sticky top-0 z-50 glass border-b border-gray-200 shadow-sm">
+    <nav class="sticky top-0 z-50 glass border-b border-gray-200">
       <div
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
@@ -195,17 +77,20 @@
         <div
           class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
         >
-          <a href="index.html" class="hover:text-black transition duration-200"
-            >Home</a
-          >
+          <a href="index.html" class="hover:text-black transition">Home</a>
 
           <div class="relative">
             <button
               id="productBtn"
-              class="flex items-center gap-1 hover:text-black transition duration-200"
+              class="flex items-center gap-1 hover:text-black transition"
             >
               Products
-              <svg class="w-4 h-4" fill="none" stroke="currentColor">
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   stroke-width="2"
                   stroke-linecap="round"
@@ -217,7 +102,7 @@
 
             <div
               id="productMenu"
-              class="hidden absolute left-0 mt-3 w-56 bg-white/90 rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+              class="hidden absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
             >
               <a
                 href="samsung.html"
@@ -243,25 +128,24 @@
             </div>
           </div>
 
-          <a
-            href="service.html"
-            class="hover:text-black transition duration-200"
-            >Repairs</a
-          >
-          <a href="emi.html" class="hover:text-black transition duration-200"
-            >EMI Options</a
-          >
+          <a href="service.html" class="hover:text-black transition">Repairs</a>
+          <a href="emi.html" class="hover:text-black transition">EMI Options</a>
 
           <a
             href="order.html"
-            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition hover:scale-105"
+            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition"
           >
             Order Now
           </a>
         </div>
 
         <button id="mobileMenuBtn" class="md:hidden">
-          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor">
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               stroke-width="2"
               stroke-linecap="round"
@@ -273,7 +157,6 @@
       </div>
     </nav>
 
-    <!-- MOBILE MENU -->
     <div
       id="mobileMenu"
       class="hidden md:hidden bg-white border-b border-gray-100 px-8 py-4 space-y-4 shadow-lg fixed w-full z-40"
@@ -294,7 +177,7 @@
       <a href="service.html" class="block text-gray-600 font-medium">Repairs</a>
       <a href="emi.html" class="block text-gray-600 font-medium">EMI Options</a>
     </div>
-    <!-- HERO -->
+
     <header class="py-24 px-8 text-center bg-white relative">
       <span
         class="bg-blue-50 text-blue-600 text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
@@ -303,6 +186,7 @@
       <h1 class="text-5xl md:text-7xl font-light tracking-tight mt-6 mb-10">
         All-in-One <br /><span class="font-bold gemini-text">Mobile Hub.</span>
       </h1>
+
       <div class="relative inline-block text-left mb-12">
         <button
           id="heroProductBtn"
@@ -354,6 +238,7 @@
           >
         </div>
       </div>
+
       <div class="flex flex-wrap justify-center gap-10 opacity-100">
         <img src="images/cholamandalam.png" alt="HDB" class="h-6" />
         <img
@@ -366,6 +251,7 @@
         <img src="images/Bajaj_Finserv_Logo.svg.png" alt="Bajaj" class="h-6" />
       </div>
     </header>
+
     <section id="phones" class="max-w-7xl mx-auto py-20 px-8">
       <h2 class="text-2xl font-semibold mb-12 gemini-border pl-4">
         Latest Collections
@@ -383,7 +269,7 @@
               >AUTHORIZED</span
             >
             <img
-              src="images/samsung for index page.webp"
+              src="images/samsung-for-index-page.webp"
               alt="Samsung Galaxy"
               class="object-cover w-full h-full group-hover:scale-110 transition duration-700"
             />
@@ -395,6 +281,7 @@
             Budget M to Ultra S-series
           </p>
         </div>
+
         <div
           onclick="location.href = 'iphone.html'"
           class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
@@ -403,7 +290,7 @@
             class="aspect-square bg-gray-50 rounded-3xl mb-4 overflow-hidden"
           >
             <img
-              src="images/iphone 17"
+              src="images/iphone17"
               alt="iPhone"
               class="object-cover w-full h-full group-hover:scale-105 transition duration-500"
             />
@@ -413,6 +300,7 @@
             Premium Apple Experience
           </p>
         </div>
+
         <div
           onclick="location.href = 'vivo-oppo.html'"
           class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
@@ -431,6 +319,7 @@
             Masterpiece Photography
           </p>
         </div>
+
         <div
           onclick="location.href = 'moto-oneplus.html'"
           class="group cursor-pointer hover-card p-2 rounded-3xl bg-white border border-gray-100 shadow-sm"
@@ -452,7 +341,6 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-950 text-gray-300 pt-20 pb-10 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -461,8 +349,9 @@
               <strong>Sharma Mobiles</strong>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
-              Authorized Samsung retailer in Hasimara offering premium
-              smartphones and reliable repair services.
+              Authorized <strong>Samsung retailer in Hasimara</strong> offering
+              premium smartphones and reliable repair services.
+              <strong>Best Mobile Phones Store in Hasimara</strong>
             </p>
           </div>
 
@@ -525,9 +414,43 @@
           class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500"
         >
           © 2026 Sharma Mobiles. All rights reserved.
+
           <br />Maintained by The Visionary Labz <br />7602858368 / 7365055639
         </div>
       </div>
     </footer>
+
+    <script>
+      const menus = {
+        productBtn: "productMenu",
+        heroProductBtn: "heroProductMenu",
+        mobileMenuBtn: "mobileMenu",
+      };
+
+      Object.entries(menus).forEach(([btnId, menuId]) => {
+        const btn = document.getElementById(btnId);
+        const menu = document.getElementById(menuId);
+
+        if (btn && menu) {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            // Close others first
+            Object.values(menus).forEach((id) => {
+              if (id !== menuId)
+                document.getElementById(id).classList.add("hidden");
+            });
+            menu.classList.toggle("hidden");
+          });
+        }
+      });
+
+      // Global close
+      window.addEventListener("click", () => {
+        Object.values(menus).forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>

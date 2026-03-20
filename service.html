@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Repairs & Accessories | Sharma Mobiles</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -35,14 +32,13 @@
       .gemini-gradient {
         background: linear-gradient(135deg, #444746 0%, #1e1e1e 100%);
       }
-
       .glass-card {
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
         border-bottom: 1px solid #e5e7eb;
       }
 
-      /* Scroll */
+      /* Slider Functionality */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -50,7 +46,6 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-
       .snap-inline {
         scroll-snap-type: x mandatory;
       }
@@ -59,33 +54,24 @@
         flex-shrink: 0;
       }
 
-      /* Card animation */
       .service-card {
-        transition:
-          transform 0.35s ease,
-          box-shadow 0.35s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
-      .service-card:hover {
-        transform: translateY(-6px);
-      }
-
-      /* Navigation buttons */
       .nav-btn {
         background: white;
         padding: 12px;
-        border-radius: 999px;
+        border-radius: 50%;
         z-index: 10;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-        transition: all 0.25s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
       }
-
       .nav-btn:hover {
-        transform: scale(1.08);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        transform: scale(1.1);
+        background: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       }
 
-      /* Infinite scroll */
       @keyframes scroll {
         0% {
           transform: translateX(0);
@@ -94,136 +80,38 @@
           transform: translateX(-50%);
         }
       }
-
       .animate-scroll {
         display: flex;
         width: 200%;
         animation: scroll 25s linear infinite;
       }
-
       .animate-scroll:hover {
         animation-play-state: paused;
       }
     </style>
   </head>
-
   <body class="antialiased">
-    <!-- NAV -->
-    <nav class="sticky top-0 z-50 glass border-b border-gray-200 shadow-sm">
-      <div
-        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
+    <nav
+      class="sticky top-0 z-50 glass-card py-4 px-8 flex justify-between items-center"
+    >
+      <a
+        href="index.html"
+        class="text-xl font-bold tracking-tighter uppercase gemini-text"
+        >Sharma Mobiles</a
       >
+      <div
+        class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600"
+      >
+        <a href="index.html" class="hover:text-black transition">Home</a>
+        <a href="emi.html" class="hover:text-black transition">EMI Options</a>
         <a
-          href="index.html"
-          class="text-xl font-black tracking-tight brand-gradient"
+          href="https://wa.me/918348554018"
+          class="px-6 py-2 gemini-gradient text-white rounded-full text-xs shadow-lg hover:opacity-90 transition"
+          >Contact Us</a
         >
-          Sharma Mobiles
-        </a>
-
-        <div
-          class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
-        >
-          <a href="index.html" class="hover:text-black transition duration-200"
-            >Home</a
-          >
-
-          <div class="relative">
-            <button
-              id="productBtn"
-              class="flex items-center gap-1 hover:text-black transition duration-200"
-            >
-              Products
-              <svg class="w-4 h-4" fill="none" stroke="currentColor">
-                <path
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            <div
-              id="productMenu"
-              class="hidden absolute left-0 mt-3 w-56 bg-white/90 rounded-xl shadow-xl border border-gray-100 overflow-hidden"
-            >
-              <a
-                href="samsung.html"
-                class="block px-5 py-3 hover:bg-gray-50 font-semibold text-blue-600"
-                >Samsung Galaxy</a
-              >
-              <a href="iphone.html" class="block px-5 py-3 hover:bg-gray-50"
-                >iPhone</a
-              >
-              <a href="vivo-oppo.html" class="block px-5 py-3 hover:bg-gray-50"
-                >Vivo / Oppo</a
-              >
-              <a
-                href="realme-redmi.html"
-                class="block px-5 py-3 hover:bg-gray-50"
-                >Realme / Redmi</a
-              >
-              <a
-                href="moto-oneplus.html"
-                class="block px-5 py-3 hover:bg-gray-50"
-                >Moto / OnePlus</a
-              >
-            </div>
-          </div>
-
-          <a
-            href="service.html"
-            class="hover:text-black transition duration-200"
-            >Repairs</a
-          >
-          <a href="emi.html" class="hover:text-black transition duration-200"
-            >EMI Options</a
-          >
-
-          <a
-            href="order.html"
-            class="px-5 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-gray-900 transition hover:scale-105"
-          >
-            Order Now
-          </a>
-        </div>
-
-        <button id="mobileMenuBtn" class="md:hidden">
-          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor">
-            <path
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
       </div>
     </nav>
 
-    <!-- MOBILE MENU -->
-    <div
-      id="mobileMenu"
-      class="hidden md:hidden bg-white border-b border-gray-100 px-8 py-4 space-y-4 shadow-lg fixed w-full z-40"
-    >
-      <a href="samsung.html" class="block text-blue-600 font-bold"
-        >Samsung Galaxy</a
-      >
-      <a href="iphone.html" class="block text-gray-600 font-medium">iPhone</a>
-      <a href="vivo-oppo.html" class="block text-gray-600 font-medium"
-        >Vivo / Oppo</a
-      >
-      <a href="moto-oneplus.html" class="block text-gray-600 font-medium"
-        >Moto / OnePlus</a
-      >
-      <a href="realme-redmi.html" class="block text-gray-600 font-medium"
-        >Realme / Redmi</a
-      >
-      <a href="service.html" class="block text-gray-600 font-medium">Repairs</a>
-      <a href="emi.html" class="block text-gray-600 font-medium">EMI Options</a>
-    </div>
-
-    <!-- REPAIR -->
     <section id="repair" class="max-w-7xl mx-auto py-20 px-8">
       <div
         class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6"
@@ -270,6 +158,7 @@
           </button>
         </div>
       </div>
+
       <div
         id="repair-track"
         class="flex gap-6 overflow-x-auto no-scrollbar snap-inline pb-10"
@@ -307,6 +196,7 @@
             Book Repair
           </button>
         </div>
+
         <div
           class="snap-item w-[300px] md:w-[350px] bg-white border border-gray-100 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group"
         >
@@ -340,6 +230,7 @@
             Book Repair
           </button>
         </div>
+
         <div
           class="snap-item w-[300px] md:w-[350px] bg-white border border-gray-100 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group"
         >
@@ -371,6 +262,7 @@
             Book Repair
           </button>
         </div>
+
         <div
           class="snap-item w-[300px] md:w-[350px] bg-white border border-gray-100 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group"
         >
@@ -404,6 +296,7 @@
         </div>
       </div>
     </section>
+
     <section
       id="acc-store"
       class="bg-white py-24 px-8 border-y border-gray-100"
@@ -420,6 +313,7 @@
           Upgrade your lifestyle with 100% genuine products.
         </p>
       </div>
+
       <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
         <div
           onclick="bookService('TWS Audio')"
@@ -491,30 +385,40 @@
         </div>
       </div>
     </section>
+
     <div class="bg-blue-600 py-6 overflow-hidden border-y border-blue-700">
       <div class="animate-scroll">
         <div
           class="flex gap-20 items-center px-10 text-white font-bold uppercase tracking-[0.2em] text-[10px]"
         >
-          <span>Easy EMI Available</span> <span>•</span>
-          <span>Bajaj Finserv Approved Partner</span> <span>•</span>
-          <span>Low Down Payment Options</span> <span>•</span>
-          <span>TVS Credit Available</span> <span>•</span>
-          <span>HDB Financial Services</span> <span>•</span>
+          <span>Easy EMI Available</span>
+          <span>•</span>
+          <span>Bajaj Finserv Approved Partner</span>
+          <span>•</span>
+          <span>Low Down Payment Options</span>
+          <span>•</span>
+          <span>TVS Credit Available</span>
+          <span>•</span>
+          <span>HDB Financial Services</span>
+          <span>•</span>
         </div>
         <div
           class="flex gap-20 items-center px-10 text-white font-bold uppercase tracking-[0.2em] text-[10px]"
         >
-          <span>Easy EMI Available</span> <span>•</span>
-          <span>Bajaj Finserv Approved Partner</span> <span>•</span>
-          <span>Low Down Payment Options</span> <span>•</span>
-          <span>TVS Credit Available</span> <span>•</span>
-          <span>HDB Financial Services</span> <span>•</span>
+          <span>Easy EMI Available</span>
+          <span>•</span>
+          <span>Bajaj Finserv Approved Partner</span>
+          <span>•</span>
+          <span>Low Down Payment Options</span>
+          <span>•</span>
+          <span>TVS Credit Available</span>
+          <span>•</span>
+          <span>HDB Financial Services</span>
+          <span>•</span>
         </div>
       </div>
     </div>
 
-    <!-- FOOTER (unchanged structure, minor polish) -->
     <footer class="bg-gray-950 text-gray-300 pt-20 pb-10 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -597,7 +501,6 @@
         const track = document.getElementById("repair-track");
         const cardWidth = track.querySelector(".snap-item").offsetWidth;
         const gap = 24;
-
         track.scrollBy({
           left: (cardWidth + gap) * direction,
           behavior: "smooth",
@@ -609,7 +512,6 @@
         const message = encodeURIComponent(
           `Hi Sharma Mobiles! I'm looking for ${item}. Can you share the pricing and availability with me?`,
         );
-
         window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
       }
     </script>

@@ -17,130 +17,39 @@
         font-family: Inter, sans-serif;
         background: #fafafa;
         color: #111827;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
       }
 
-      /* =========================
-         Branding
-      ========================= */
       .brand-gradient {
         background: linear-gradient(90deg, #2563eb, #8b5cf6, #ef4444);
-        background-size: 200% 200%;
-        animation: gradientMove 6s ease infinite;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      /* =========================
-         Navbar Glass
-      ========================= */
-      nav {
-        backdrop-filter: blur(16px) saturate(140%);
-        background: rgba(255, 255, 255, 0.75);
-      }
-
-      /* =========================
-         Cards
-      ========================= */
       .checkout-card {
         background: white;
         border: 1px solid #e5e7eb;
         border-radius: 1.5rem;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
-        transition: all 0.3s ease;
+        box-shadow: 0 15px 40px -12px rgba(0, 0, 0, 0.08);
       }
 
-      .checkout-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
-      }
-
-      /* =========================
-         Form Container
-      ========================= */
       .form-container {
         width: 100%;
         overflow: hidden;
         border-radius: 1.5rem;
         border: 1px solid #e5e7eb;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
-        background: white;
       }
 
-      iframe {
-        transition: all 0.3s ease;
-      }
-
-      /* =========================
-         Icon Cards
-      ========================= */
-      .icon-box {
-        transition: all 0.3s ease;
-      }
-
-      .checkout-card:hover .icon-box {
-        transform: scale(1.08);
-      }
-
-      /* =========================
-         WhatsApp CTA
-      ========================= */
-      .whatsapp-cta {
-        transition: all 0.25s ease;
-      }
-
-      .whatsapp-cta:hover {
-        transform: translateY(-2px);
-        color: #16a34a;
-      }
-
-      /* =========================
-         Section Glow
-      ========================= */
-      main::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          circle at 20% 20%,
-          rgba(37, 99, 235, 0.05),
-          transparent 60%
-        );
-        pointer-events: none;
-      }
-
-      /* =========================
-         Mobile Fix
-      ========================= */
       @media (max-width: 768px) {
         .form-container iframe {
           height: 1350px;
-        }
-
-        .brand-gradient {
-          animation: none;
         }
       }
     </style>
   </head>
 
   <body class="antialiased">
-    <!-- NAVBAR -->
     <nav
-      class="sticky top-0 z-50 border-b border-gray-200 px-6 py-5 flex justify-between items-center"
+      class="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-5 flex justify-between items-center"
     >
       <a
         href="index.html"
@@ -157,16 +66,17 @@
       </a>
     </nav>
 
-    <!-- HEADER -->
     <header class="text-center py-14 px-6">
       <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">
         Secure Your Order
       </h1>
+
       <p class="text-gray-500 mt-3 max-w-lg mx-auto text-sm md:text-base">
         Fill the form to reserve your device. Our team will confirm pricing, EMI
         options and availability shortly.
       </p>
     </header>
+
     <main class="max-w-6xl mx-auto px-6 pb-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div class="form-container">
@@ -181,11 +91,13 @@
             Loading…
           </iframe>
         </div>
+
         <div class="lg:sticky lg:top-24 space-y-6">
           <div class="checkout-card p-8">
             <h2 class="text-xl font-semibold mb-6">
               Why shop with Sharma Mobiles
             </h2>
+
             <div class="space-y-6">
               <div class="flex gap-4">
                 <div
@@ -205,6 +117,7 @@
                     />
                   </svg>
                 </div>
+
                 <div>
                   <h4 class="font-semibold">100% Genuine Products</h4>
                   <p class="text-sm text-gray-500">
@@ -212,6 +125,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="flex gap-4">
                 <div
                   class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0"
@@ -230,6 +144,7 @@
                     />
                   </svg>
                 </div>
+
                 <div>
                   <h4 class="font-semibold">Visit Our Store</h4>
                   <p class="text-sm text-gray-500">
@@ -237,6 +152,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="flex gap-4">
                 <div
                   class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center flex-shrink-0"
@@ -255,6 +171,7 @@
                     />
                   </svg>
                 </div>
+
                 <div>
                   <h4 class="font-semibold">Instant Assistance</h4>
                   <p class="text-sm text-gray-500">
@@ -264,10 +181,12 @@
               </div>
             </div>
           </div>
+
           <div class="checkout-card p-6 bg-gray-50 border-gray-200">
             <p class="text-sm text-gray-600 mb-3">
               Need help placing your order?
             </p>
+
             <a
               href="https://wa.me/918348554018"
               class="inline-flex items-center gap-2 text-green-600 font-semibold hover:underline"
@@ -279,7 +198,6 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-950 text-gray-300 pt-20 pb-10 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
